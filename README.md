@@ -1,14 +1,13 @@
-Утилитка, необходимая для быстрого получения версий микросервисов, задеплоенных в текущий момент на окружении в текущем контектсте (context) kubernetes cluster.
+A utility to quickly get versions of microservices currently deployed to the environment in the current kubernetes cluster context.
 
-Файл kube_config.cfg должен либо содержать актуальный конфиг kubectl либо быть символической ссылкой на валидный конфиг kubectl.
+The kube_config.cfg file must either contain the current kubectl config or be a symbolic link to a valid kubectl config.
 
+To run:
 
-Для запуска: 
+- Specify parameters in the main.py file:
 
-Указать параметры в файле main.py:
+project_namespace_name = "" // namespace name
 
-project_namespace_name = ""  - имя неймспейса
+get_data_from = 'deployment' // where to get information from (from deployments or pods); by default, as you can see, it is taken from deployments.
 
-get_data_from = 'deployment' - откуда брать информацию (из деплойментов или подов - pod); по умолчанию, как видно, берется из деплойментов.
-
-Установить зависимости: pip install -r requirements.txt
+- Install dependencies: pip install -r requirements.txt
